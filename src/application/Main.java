@@ -3,8 +3,9 @@ package application;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.stage.Stage;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.stage.Stage;
 
 
 public class Main extends Application {
@@ -15,6 +16,7 @@ public class Main extends Application {
 			
 			primaryStage.setTitle("Weather");
 			primaryStage.setScene(new Scene(root, 1600, 900));
+			primaryStage.getScene().getStylesheets().addAll(getClass().getResource("style.css").toExternalForm());
 			primaryStage.show();
 			primaryStage.setResizable(false);
 			primaryStage.sizeToScene();
@@ -26,5 +28,6 @@ public class Main extends Application {
 	
 	public static void main(String[] args) {
 		launch(args);
+		
 	}
 }
