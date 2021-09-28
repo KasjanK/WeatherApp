@@ -85,6 +85,7 @@ public class OpenWeatherMap {
         this.description = json_specific.get("description").toString();
         this.icon = json_specific.get("icon").toString();
         System.out.println(city);
+        System.out.println(icon);
     }
     
     

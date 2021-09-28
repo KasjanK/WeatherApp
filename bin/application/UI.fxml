@@ -48,11 +48,7 @@
                   <Font name="Marlett" size="20.0" />
                </font>
             </Label>
-            <ImageView fx:id="img" fitHeight="150.0" fitWidth="200.0" layoutX="336.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../pics/rain-128.png" />
-               </image>
-            </ImageView>
+            <ImageView fx:id="img" fitHeight="150.0" fitWidth="200.0" layoutX="336.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true" />
             <Label fx:id="pressure" alignment="CENTER" layoutX="320.0" layoutY="243.0" text="hpa" textFill="WHITE">
                <font>
                   <Font name="Marlett" size="20.0" />
@@ -68,11 +64,6 @@
                   <Font name="Marlett" size="37.0" />
                </font>
             </Label>
-            <ImageView fitHeight="72.0" fitWidth="72.0" layoutX="650.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../pics/sun-5-128.png" />
-               </image>
-            </ImageView>
             <Label alignment="CENTER" layoutX="660.0" layoutY="205.0" text="60" textFill="WHITE">
                <font>
                   <Font name="Marlett" size="47.0" />
@@ -83,11 +74,6 @@
                   <Font name="Marlett" size="37.0" />
                </font>
             </Label>
-            <ImageView fitHeight="72.0" fitWidth="72.0" layoutX="850.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../pics/clouds-128.png" />
-               </image>
-            </ImageView>
             <Label layoutX="860.0" layoutY="205.0" text="60" textFill="WHITE">
                <font>
                   <Font name="Marlett" size="47.0" />
@@ -98,11 +84,6 @@
                   <Font name="Marlett" size="37.0" />
                </font>
             </Label>
-            <ImageView fitHeight="72.0" fitWidth="72.0" layoutX="1047.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../pics/clouds-128.png" />
-               </image>
-            </ImageView>
             <Label layoutX="1057.0" layoutY="205.0" text="60" textFill="WHITE">
                <font>
                   <Font name="Marlett" size="47.0" />
@@ -113,11 +94,6 @@
                   <Font name="Marlett" size="37.0" />
                </font>
             </Label>
-            <ImageView fitHeight="72.0" fitWidth="72.0" layoutX="1241.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../pics/sun-5-128.png" />
-               </image>
-            </ImageView>
             <Label layoutX="1251.0" layoutY="205.0" text="60" textFill="WHITE">
                <font>
                   <Font name="Marlett" size="47.0" />
@@ -128,11 +104,6 @@
                   <Font name="Marlett" size="37.0" />
                </font>
             </Label>
-            <ImageView fitHeight="72.0" fitWidth="72.0" layoutX="1435.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../pics/sun-5-128.png" />
-               </image>
-            </ImageView>
             <Label layoutX="1446.0" layoutY="205.0" text="60" textFill="WHITE">
                <font>
                   <Font name="Marlett" size="47.0" />
@@ -140,11 +111,8 @@
             </Label>
          </children>
       </Pane>
-      <Button fx:id="set" layoutX="723.0" layoutY="454.0" mnemonicParsing="false" onAction="#handleButtonClicks" text="set" />
-      <TextField id="txtField" fx:id="cityName" alignment="CENTER" editable="true" layoutX="560.0" layoutY="454.0" style="-fx-prompt-text-fill: #fff; -fx-text-fill: #fff;" />
-      <TextField id="txtField" fx:id="invis" alignment="CENTER" editable="true" layoutX="400.0" layoutY="300.0" style="-fx-prompt-text-fill: #fff; -fx-text-fill: #fff;" />
-      <Button fx:id="change" layoutX="764.0" layoutY="454.0" mnemonicParsing="false" onAction="#handleButtonClicks" text="Change" />
-      <Button fx:id="cancel" layoutX="831.0" layoutY="454.0" mnemonicParsing="false" onAction="#handleButtonClicks" text="Cancel" />
+      <Button fx:id="search" layoutX="723.0" layoutY="454.0" onAction="#handleButtonClicks" text="search" />
+      <TextField fx:id="cityName" alignment="CENTER" layoutX="560.0" layoutY="454.0" />
       <Label fx:id="errors" layoutX="104.0" layoutY="206.0" text="Errors" textFill="WHITE">
          <font>
             <Font name="Marlett" size="20.0" />
