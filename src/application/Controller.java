@@ -3,10 +3,7 @@ package application;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import application.WeatherImgChanger;
 
-import javafx.animation.FadeTransition;
-import javafx.animation.PauseTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -22,13 +19,16 @@ public class Controller implements Initializable {
 	String citySet;
 	
 	@FXML
-	private ImageView img;
+	private ImageView img, img1, img2, img3, img4, img5;
 	@FXML
 	private Button search;
 	@FXML
 	private TextField cityName;
 	@FXML
-	private Label city, temperature, day, desc, errors, windSpeed, cloudiness, pressure, humidity;
+	private Label city, temperature, temperature1, temperature2, temperature3, temperature4, temperature5, 
+				  day, day1, day2, day3, day4, day5, 
+				  desc, errors, windSpeed, cloudiness, pressure, humidity;
+	
 	
 	 public Controller() {
 	        this.citySet = "Bucharest".toUpperCase();
@@ -42,10 +42,20 @@ public class Controller implements Initializable {
         }
      }
 	
-	//method to clear all the fields
+	// en metod som rensar allt
     private void reset() {
         day.setText("");
+        day1.setText("");
+        day2.setText("");
+        day3.setText("");
+        day4.setText("");
+        day5.setText("");
         temperature.setText("");
+        temperature1.setText("");
+        temperature2.setText("");
+        temperature3.setText("");
+        temperature4.setText("");
+        temperature5.setText("");
         desc.setText("");
         windSpeed.setText("");
         cloudiness.setText("");
@@ -66,15 +76,26 @@ public class Controller implements Initializable {
                 cityName.setText((cityName.getText().trim()).toUpperCase());
                 openWeatherMap = new OpenWeatherMap(citySet);
                 openWeatherMap.getWeather();
+                openWeatherMap.getForecast();
                 city.setText(openWeatherMap.getCity().toUpperCase());
                 temperature.setText(openWeatherMap.getTemperature()+"°");
-                day.setText(openWeatherMap.getDay());
+                temperature1.setText(openWeatherMap.getTemperature1()+"°");
+                temperature2.setText(openWeatherMap.getTemperature2()+"°");
+                temperature3.setText(openWeatherMap.getTemperature3()+"°");
+                temperature4.setText(openWeatherMap.getTemperature4()+"°");
+                temperature5.setText(openWeatherMap.getTemperature5()+"°");
+                day1.setText(openWeatherMap.getDay1());
+                day2.setText(openWeatherMap.getDay2());
+                day3.setText(openWeatherMap.getDay3());
+                day4.setText(openWeatherMap.getDay4());
+                day5.setText(openWeatherMap.getDay5());
+                img.setImage(new Image(WeatherImgChanger.getImage(openWeatherMap.getIcon())));
                 desc.setText(openWeatherMap.getDescription().toUpperCase());
                 windSpeed.setText(openWeatherMap.getWindSpeed()+" m/s");
                 cloudiness.setText(openWeatherMap.getCloudiness()+"%");
                 pressure.setText(openWeatherMap.getPressure()+" hpa");
                 humidity.setText(openWeatherMap.getHumidity()+"%");
-            }catch(Exception e){
+            } catch (Exception e) {
                 city.setText("Error");
                 showToast("City with the given name was not found.");
                 reset();
@@ -82,26 +103,11 @@ public class Controller implements Initializable {
         }
     }
 
+    // visa error message
     private void showToast(String message) {
         errors.setText(message);
         errors.setTextFill(Color.TOMATO);
         errors.setStyle("-fx-background-color: #fff; -fx-background-radius: 50px;");
-
-        FadeTransition fadeIn = new FadeTransition();
-        fadeIn.setToValue(1);
-        fadeIn.setFromValue(0);
-        fadeIn.play();
-
-        fadeIn.setOnFinished(event -> {
-            PauseTransition pause = new PauseTransition();
-            pause.play();
-            pause.setOnFinished(event2 -> {
-                FadeTransition fadeOut = new FadeTransition();
-                fadeOut.setToValue(0);
-                fadeOut.setFromValue(1);
-                fadeOut.play();
-            });
-        });
     }
     
 	public void initialize(URL location, ResourceBundle resources) {
@@ -110,25 +116,35 @@ public class Controller implements Initializable {
         openWeatherMap = new OpenWeatherMap(citySet);
 
         //try catch block to see if there is internet and disabling ecery field
-        openWeatherMap.getWeather();
-        city.setText(openWeatherMap.getCity().toUpperCase());
-        temperature.setText(openWeatherMap.getTemperature()+"°");
-        day.setText(openWeatherMap.getDay());
-        desc.setText(openWeatherMap.getDescription().toUpperCase());
-        // img.setImage(new Image(WeatherImgChanger.getImage(openWeatherMap.getIcon())));
-        windSpeed.setText(openWeatherMap.getWindSpeed()+" m/s");
-        cloudiness.setText(openWeatherMap.getCloudiness()+"%");
-        pressure.setText(openWeatherMap.getPressure()+" hpa");
-        humidity.setText(openWeatherMap.getHumidity()+"%");
-        /*} catch (Exception e){
+        try {
+        	openWeatherMap.getWeather();
+        	openWeatherMap.getForecast();
+        	city.setText(openWeatherMap.getCity().toUpperCase());
+        	temperature.setText(openWeatherMap.getTemperature()+"°");
+        	temperature1.setText(openWeatherMap.getTemperature1()+"°");
+        	temperature2.setText(openWeatherMap.getTemperature2()+"°");
+        	temperature3.setText(openWeatherMap.getTemperature3()+"°");
+        	temperature4.setText(openWeatherMap.getTemperature4()+"°");
+        	temperature5.setText(openWeatherMap.getTemperature5()+"°");
+        	day1.setText(openWeatherMap.getDay1());
+        	day2.setText(openWeatherMap.getDay2());
+        	day3.setText(openWeatherMap.getDay3());
+        	day4.setText(openWeatherMap.getDay4());
+        	day5.setText(openWeatherMap.getDay5());
+        	desc.setText(openWeatherMap.getDescription().toUpperCase());
+        	img.setImage(new Image(WeatherImgChanger.getImage(openWeatherMap.getIcon())));
+        	windSpeed.setText(openWeatherMap.getWindSpeed()+" m/s");
+        	cloudiness.setText(openWeatherMap.getCloudiness()+"%");
+        	pressure.setText(openWeatherMap.getPressure()+" hpa");
+        	humidity.setText(openWeatherMap.getHumidity()+"%");
+        } catch (Exception e){
             city.setText("Error");
             showToast("this sucks");
             reset();
-            change.setDisable(true);
             cityName.setText("");
-        } */
+        }
 
-        //Set the city entered into textField on pressing enter on Keyboard
+        // binda enter till sökfunktionen
         cityName.setOnKeyPressed(e -> {
             if(e.getCode() == KeyCode.ENTER){
                 setPressed();

@@ -23,90 +23,92 @@
       </Label>
       <Pane layoutY="618.0" prefHeight="282.0" prefWidth="1600.0" style="-fx-background-color: rgba(31, 29, 40, 0.5);">
          <children>
-            <Label fx:id="day" layoutX="99.0" layoutY="7.0" text="Day" textFill="WHITE">
+            <Label alignment="CENTER" layoutX="40.0" layoutY="7.0" prefHeight="51.0" prefWidth="192.0" text="Today" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font size="35.0" />
                </font>
             </Label>
-            <Label fx:id="temperature" alignment="CENTER" layoutX="82.0" layoutY="53.0" text="6" textFill="WHITE">
-               <font>
-                  <Font name="Marlett" size="170.0" />
-               </font>
-            </Label>
-            <Label fx:id="desc" alignment="CENTER" layoutX="61.0" layoutY="234.0" text="Description" textFill="WHITE">
+            <Label fx:id="desc" alignment="CENTER" layoutX="16.0" layoutY="234.0" prefHeight="39.0" prefWidth="240.0" text="Description" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font size="27.0" />
                </font>
             </Label>
-            <Label fx:id="windSpeed" alignment="CENTER" layoutX="319.0" layoutY="32.0" text="m/s" textFill="WHITE">
+            <Label fx:id="windSpeed" alignment="CENTER" layoutX="289.0" layoutY="32.0" prefHeight="21.0" prefWidth="96.0" text="m/s" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Marlett" size="20.0" />
                </font>
             </Label>
-            <Label fx:id="cloudiness" layoutX="476.0" layoutY="32.0" text="\%" textFill="WHITE">
+            <Label fx:id="cloudiness" alignment="CENTER" layoutX="438.0" layoutY="32.0" prefHeight="21.0" prefWidth="96.0" text="\%" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Marlett" size="20.0" />
                </font>
             </Label>
-            <ImageView fx:id="img" fitHeight="150.0" fitWidth="200.0" layoutX="336.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true" />
-            <Label fx:id="pressure" alignment="CENTER" layoutX="320.0" layoutY="243.0" text="hpa" textFill="WHITE">
+            <Label fx:id="pressure" alignment="CENTER" layoutX="294.0" layoutY="243.0" prefHeight="21.0" prefWidth="85.0" text="hpa" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Marlett" size="20.0" />
                </font>
             </Label>
-            <Label fx:id="humidity" layoutX="476.0" layoutY="243.0" text="\%" textFill="WHITE">
+            <Label fx:id="humidity" alignment="CENTER" layoutX="433.0" layoutY="243.0" prefHeight="21.0" prefWidth="105.0" text="\%" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Marlett" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="643.0" layoutY="17.0" prefHeight="72.0" prefWidth="86.0" text="DAY1" textFill="WHITE">
+            <Label fx:id="day1" alignment="CENTER" layoutX="560.0" layoutY="17.0" prefHeight="72.0" prefWidth="211.0" text="DAY1" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Marlett" size="37.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" layoutX="660.0" layoutY="205.0" text="60" textFill="WHITE">
+            <Label fx:id="temperature1" alignment="CENTER" layoutX="613.0" layoutY="205.0" prefHeight="48.0" prefWidth="105.0" text="60" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Marlett" size="47.0" />
                </font>
             </Label>
-            <Label layoutX="850.0" layoutY="17.0" prefHeight="72.0" prefWidth="86.0" text="DAY2" textFill="WHITE">
+            <Label fx:id="day2" alignment="CENTER" layoutX="761.5" layoutY="17.0" prefHeight="72.0" prefWidth="211.0" text="DAY2" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Marlett" size="37.0" />
                </font>
             </Label>
-            <Label layoutX="860.0" layoutY="205.0" text="60" textFill="WHITE">
+            <Label fx:id="temperature2" alignment="CENTER" layoutX="819.0" layoutY="205.0" prefHeight="48.0" prefWidth="96.0" text="60" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Marlett" size="47.0" />
                </font>
             </Label>
-            <Label layoutX="1040.0" layoutY="17.0" prefHeight="72.0" prefWidth="86.0" text="DAY3" textFill="WHITE">
+            <Label fx:id="day3" alignment="CENTER" layoutX="963.0" layoutY="17.0" prefHeight="72.0" prefWidth="211.0" text="DAY3" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Marlett" size="37.0" />
                </font>
             </Label>
-            <Label layoutX="1057.0" layoutY="205.0" text="60" textFill="WHITE">
+            <Label fx:id="temperature3" alignment="CENTER" layoutX="1026.0" layoutY="205.0" prefHeight="48.0" prefWidth="85.0" text="60" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Marlett" size="47.0" />
                </font>
             </Label>
-            <Label layoutX="1234.0" layoutY="17.0" prefHeight="72.0" prefWidth="86.0" text="DAY4" textFill="WHITE">
+            <Label fx:id="day4" alignment="CENTER" layoutX="1164.5" layoutY="17.0" prefHeight="72.0" prefWidth="211.0" text="DAY4" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Marlett" size="37.0" />
                </font>
             </Label>
-            <Label layoutX="1251.0" layoutY="205.0" text="60" textFill="WHITE">
+            <Label fx:id="temperature4" alignment="CENTER" layoutX="1232.0" layoutY="205.0" prefHeight="48.0" prefWidth="77.0" text="60" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Marlett" size="47.0" />
                </font>
             </Label>
-            <Label layoutX="1441.0" layoutY="17.0" prefHeight="72.0" prefWidth="61.0" text="DAY5" textFill="WHITE">
+            <Label fx:id="day5" alignment="CENTER" layoutX="1366.0" layoutY="17.0" prefHeight="72.0" prefWidth="211.0" text="DAY5" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Marlett" size="37.0" />
                </font>
             </Label>
-            <Label layoutX="1446.0" layoutY="205.0" text="60" textFill="WHITE">
+            <Label fx:id="temperature5" alignment="CENTER" layoutX="1433.0" layoutY="205.0" prefHeight="48.0" prefWidth="77.0" text="60" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Marlett" size="47.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="img" fitHeight="150.0" fitWidth="200.0" layoutX="323.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+
+            </ImageView>
+            <Label fx:id="temperature" alignment="CENTER" layoutX="16.0" layoutY="72.0" prefHeight="150.0" prefWidth="240.0" text="60" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Marlett" size="125.0" />
                </font>
             </Label>
          </children>

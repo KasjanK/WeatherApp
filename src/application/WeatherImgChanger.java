@@ -3,31 +3,19 @@ package application;
 public class WeatherImgChanger {
 	public static String getImage(String icon) {
 		switch(icon) {
-		case "01d":
-            return "/pics/01d.png";
-        case "01n":
-            return "/images/01n.png";
-        case "02d":
-            return "/pics/02d.png";
-        case "02n":
-            return "/images/02n.png";
-        case "03d": case "03n":
-            return "/images/03.png";
-        case "04d": case "04n":
-            return "/images/04.png";
-        case "09d": case "09n":
-            return "/images/09.png";
-        case "10d":
-            return "/images/10d.png";
-        case "10n":
-            return "/images/10n.png";
+		case "01d": case "01n":
+            return "01d.png";
+        case "02d": case "02n": case "50d": case "50n":
+            return "02d.png";
+        case "03d": case "03n": case "04d": case "04n":
+            return "03.png";
+        case "09d": case "09n": case "10d": case "10n":
+            return "09.png";
         case "11n": case "11d":
-            return "/images/11.png";
+            return "11.png";
         case "13d": case "13n":
-            return "/images/13.png";
-        case "50d": case "50n":
-            return "/images/50.png";
+            return "13.png";
 		}
-		return "/pics/01d.png";
+		return "01d.png";
 	}
 }
