@@ -103,7 +103,7 @@
                   <Font name="Marlett" size="47.0" />
                </font>
             </Label>
-            <ImageView fx:id="img" fitHeight="150.0" fitWidth="200.0" layoutX="323.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="img" fitHeight="150.0" fitWidth="200.0" layoutX="325.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
 
             </ImageView>
             <Label fx:id="temperature" alignment="CENTER" layoutX="16.0" layoutY="72.0" prefHeight="150.0" prefWidth="240.0" text="60" textAlignment="CENTER" textFill="WHITE">
@@ -111,6 +111,26 @@
                   <Font name="Marlett" size="125.0" />
                </font>
             </Label>
+            <ImageView fitHeight="21.0" fitWidth="24.0" layoutX="325.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../pics/wind.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="21.0" fitWidth="24.0" layoutX="475.0" layoutY="219.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../pics/droplet-128.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="21.0" fitWidth="24.0" layoutX="474.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../pics/03.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="21.0" fitWidth="24.0" layoutX="325.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../pics/pressure-128.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
       <Button fx:id="search" layoutX="723.0" layoutY="454.0" onAction="#handleButtonClicks" text="search" />
